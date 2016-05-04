@@ -26,7 +26,6 @@ Version: 2.6.00
 ***************************************************************************/
 
 using System;
-using System.IO;
 using System.IO.Packaging;
 using System.IO.Compression;
 using System.Text;
@@ -37,6 +36,7 @@ using System.Xml.Linq;
 using System.Collections.Generic;
 using DocumentFormat.OpenXml.Packaging;
 using System.Drawing;
+using System.IO;
 
 namespace OpenXmlPowerTools
 {
@@ -112,15 +112,9 @@ namespace OpenXmlPowerTools
             XDocument partXDocument = part.GetXDocument();
             if (partXDocument != null)
             {
-#if true
                 using (Stream partStream = part.GetStream(FileMode.Create, FileAccess.Write))
                 using (XmlWriter partXmlWriter = XmlWriter.Create(partStream))
                     partXDocument.Save(partXmlWriter);
-#else
-                byte[] array = Encoding.UTF8.GetBytes(partXDocument.ToString(SaveOptions.DisableFormatting));
-                using (MemoryStream ms = new MemoryStream(array))
-                    part.FeedData(ms);
-#endif
             }
         }
 

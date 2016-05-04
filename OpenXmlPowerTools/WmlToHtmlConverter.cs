@@ -2702,7 +2702,7 @@ namespace OpenXmlPowerTools
                     var last = g.Count() - 1;
                     return g.Select((e, i) => ConvertToHtmlTransform(wordDoc, settings, e, i != last, currentMarginLeft));
                 });
-            return (IEnumerable<object>)newContent;
+            return newContent.ToList().First();
         }
 
         private class BorderMappingInfo

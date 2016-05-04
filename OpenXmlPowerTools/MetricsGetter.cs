@@ -171,7 +171,7 @@ namespace OpenXmlPowerTools
                 {
                     try
                     {
-                        XDocument xdoc = XDocument.Load(st);
+                        XDocument xdoc = XDocument.Parse(new StreamReader(st).ReadToEnd());
                         var namespaces = xdoc
                             .Descendants()
                             .Attributes()

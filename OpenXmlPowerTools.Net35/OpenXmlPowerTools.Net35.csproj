@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6F957FF3-AFCC-4D69-8FBC-71AE21BC45C9}</ProjectGuid>
+    <ProjectGuid>{9EA82A75-E131-43E4-BDF0-DB7C402972AE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OpenXmlPowerTools</RootNamespace>

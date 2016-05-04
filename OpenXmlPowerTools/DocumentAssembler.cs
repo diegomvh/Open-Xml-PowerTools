@@ -836,7 +836,7 @@ namespace OpenXmlPowerTools
             try
             {
                 //support some cells in the table may not have an xpath expression.
-                if (String.IsNullOrWhiteSpace(xPath)) return String.Empty;
+                if (String.IsNullOrEmpty(xPath)) return String.Empty;
                 
                 xPathSelectResult = element.XPathEvaluate(xPath);
             }
